@@ -1,18 +1,30 @@
+import jdk.jfr.DataAmount;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+
 public class Airport {
     private String airportID;
     private String name;
     private String city;
     private String country;
     private String iata;
-    private String icao;
-    private String latitude;
-    private String longtitude;
-    private long altitude;
-    private int timezone;
-    private String dst;
-    private String dbTimezone;
-    private String type;
-    private String source;
+
+    public Airport(String[] res) {
+        airportID = res[0];
+        name = res[1];
+        city = res[2];
+        country = res[3];
+        iata = res[4];
+
+
+
+
+    }
+
 
     @Override
     public String toString() {
@@ -22,16 +34,8 @@ public class Airport {
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
                 ", iata='" + iata + '\'' +
-                ", icao='" + icao + '\'' +
-                ", latitude='" + latitude + '\'' +
-                ", longtitude='" + longtitude + '\'' +
-                ", altitude=" + altitude +
-                ", timezone=" + timezone +
-                ", dst='" + dst + '\'' +
-                ", dbTimezone='" + dbTimezone + '\'' +
-                ", type='" + type + '\'' +
-                ", source='" + source + '\'' +
-                '}'+ "\n";
+
+                '}' + "\n";
     }
 
     public String getAirportID() {
@@ -74,75 +78,75 @@ public class Airport {
         this.iata = iata;
     }
 
-    public String getIcao() {
-        return icao;
-    }
-
-    public void setIcao(String icao) {
-        this.icao = icao;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongtitude() {
-        return longtitude;
-    }
-
-    public void setLongtitude(String longtitude) {
-        this.longtitude = longtitude;
-    }
-
-    public long getAltitude() {
-        return altitude;
-    }
-
-    public void setAltitude(long altitude) {
-        this.altitude = altitude;
-    }
-
-    public int getTimezone() {
-        return timezone;
-    }
-
-    public void setTimezone(int timezone) {
-        this.timezone = timezone;
-    }
-
-    public String getDst() {
-        return dst;
-    }
-
-    public void setDst(String dst) {
-        this.dst = dst;
-    }
-
-    public String getDbTimezone() {
-        return dbTimezone;
-    }
-
-    public void setDbTimezone(String dbTimezone) {
-        this.dbTimezone = dbTimezone;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
-    }
+//    public String getIcao() {
+//        return icao;
+//    }
+//
+//    public void setIcao(String icao) {
+//        this.icao = icao;
+//    }
+//
+//    public String getLatitude() {
+//        return latitude;
+//    }
+//
+//    public void setLatitude(String latitude) {
+//        this.latitude = latitude;
+//    }
+//
+//    public String getLongtitude() {
+//        return longtitude;
+//    }
+//
+//    public void setLongtitude(String longtitude) {
+//        this.longtitude = longtitude;
+//    }
+//
+//    public long getAltitude() {
+//        return altitude;
+//    }
+//
+//    public void setAltitude(long altitude) {
+//        this.altitude = altitude;
+//    }
+//
+//    public int getTimezone() {
+//        return timezone;
+//    }
+//
+//    public void setTimezone(int timezone) {
+//        this.timezone = timezone;
+//    }
+//
+//    public String getDst() {
+//        return dst;
+//    }
+//
+//    public void setDst(String dst) {
+//        this.dst = dst;
+//    }
+//
+//    public String getDbTimezone() {
+//        return dbTimezone;
+//    }
+//
+//    public void setDbTimezone(String dbTimezone) {
+//        this.dbTimezone = dbTimezone;
+//    }
+//
+//    public String getType() {
+//        return type;
+//    }
+//
+//    public void setType(String type) {
+//        this.type = type;
+//    }
+//
+//    public String getSource() {
+//        return source;
+//    }
+//
+//    public void setSource(String source) {
+//        this.source = source;
+//    }
 }
